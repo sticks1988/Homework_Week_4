@@ -1,4 +1,22 @@
 var questionsEl = document.getElementById("questions");
+var finalScoreEl = document.getElementById("finalScore");
+var doneDiv = document.getElementById("game-done");
+var buttonA = document.getElementById("a");
+var buttonB = document.getElementById("b");
+var buttonC = document.getElementById("c");
+var buttonD = document.getElementById("d");
+var testSection = document.getElementById("test");
+var outcomeEl = document.getElementById("result");
+var quizTimer = document.getElementById("timer");
+var scoreDiv = document.getElementById("scorePage");
+var scoreInputName = document.getElementById("name");
+var scoreContainer = document.getElementById("scoreContainer");
+var scoreDisplayName = document.getElementById("highscore-name");
+var endGameBtns = document.getElementById("endGameBtns");
+var submitScoreBtn = document.getElementById("submitScore");
+var scoreDisplayScore = document.getElementById("score-score");
+var startQuizButton = document.getElementById("startbtn");
+var startQuizDiv = document.getElementById("start");
 
 var quizQuestions = [{
     question: "What language styles a page for HTML?",
@@ -52,3 +70,10 @@ var quizQuestions = [{
         
     
     ];
+
+var finalQuestionIndex = quizQuestions.length;
+var currentQuestionIndex = 0;
+var timeLeft = 60;
+var timerInterval;
+var score = 0;
+var correct;
